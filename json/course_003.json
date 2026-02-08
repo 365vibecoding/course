@@ -1,0 +1,40 @@
+{
+    "title":"CSS Felx",
+    "icon":"flex",
+    "description":[
+        "이과정은 개발을 진행하기 위해 필요한 것들을 준비하는 과정입니다.",
+        "개발 환경이 구축되어 있는분들은 이과정은 건너뛰어도 됩니다."
+    ],
+    "modules":[
+        {
+            "title":"준비 하기",
+            "topics":[
+                {
+                    "title":"과정 설명",
+                    "topic":"1-1.md"
+                },
+                {
+                    "title":"윈도우 서브시스템",
+                    "topic":""
+                }
+            ]
+        },
+        {
+            "title":"개발 환경 설정",
+            "topics":[
+                {
+                    "title":"vscode",
+                    "topic":""
+                },
+                {
+                    "title":"node & python 설치",
+                    "topic":""
+                },
+                {
+                    "title":"마무리",
+                    "topic":""
+                }
+            ]
+        }
+    ]
+}

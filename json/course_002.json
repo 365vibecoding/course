@@ -1,0 +1,41 @@
+{
+    "title":"ToDa App 만들기",
+    "icon":"to_do",
+    "description":[
+        "이과정은 HTML, Javascript, Vite 환경에서 ToDo WebApp을 만드는 과정입니다.",
+        "순서대로 하나씩 직접 코딩을 하면서 따라오시면 마지막에 본인만의 ToDo WebApp을",
+        "완성하실수 있을겁니다."
+    ],
+    "modules":[
+        {
+            "title":"개발 기초",
+            "topics":[
+                {
+                    "title":"Vite",
+                    "topic":"1-1.html"
+                },
+                {
+                    "title":"HTML",
+                    "topic":""
+                }
+            ]
+        },
+        {
+            "title":"Web App 만들기",
+            "topics":[
+                {
+                    "title":"Form 만들기",
+                    "topic":""
+                },
+                {
+                    "title":"Form Event 처리",
+                    "topic":""
+                },
+                {
+                    "title":"마무리",
+                    "topic":""
+                }
+            ]
+        }
+    ]
+}
