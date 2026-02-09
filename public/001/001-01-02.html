@@ -1,0 +1,34 @@
+<!-- 교육 내용 -->
+<div>
+    <h1>윈도우 서브시스템(wsl)</h1>
+    <p>
+앞으로 이 과정에서는 가능하면 Ubuntu OS를 기준으로합니다.<br>
+그래서 윈도우 환경에서는 서브시스템 즉 WSL을 설치해야 합니다.<br>
+WSL을 설치하지 않았다면 아래의 순서대로 진행해주세요.
+    </p>
+    <div>
+        <div class="tab">1. WSL 활성화</div>
+            <span class="tab"> 1) 윈도우 터미널(또는 파워쉘)을 관리자 권한으로 열기</span> <a target="_blank" href="https://learn.microsoft.com/ko-kr/windows/terminal/faq">[참고]</a>
+            <br><span class="tab"> 2) 활성화 명령어 입력</span>
+            <div class="code">wsl --install</div>
+            <img class="tab2" width="400px" src="https://devblogs.microsoft.com/commandline/wp-content/uploads/sites/33/2021/07/wslupdate.png">
+            <br><span class="tab"> 3) 설치 확인 명령어 입력</span>
+            <div class="code">wsl -list -verbose</div>
+        <br><div class="tab">2. Ubuntu 실행
+            <br><span class="tab"> 1) 윈도우 터미널 설치</span>
+            <br><span class="tab2"> - 스토어(Microsoft Store)에서 "Windows Terminal" 설치</span>
+            <br><a class="tab2" target="_blank" href="https://apps.microsoft.com/detail/9n0dx20hk701?hl=ko-KR&gl=KR">=> 클릭하여 설치</a>
+            <br><span class="tab2"> (혹은) 윈도우 스토어에서 "Windows Terminal" 앱 설치</span>
+            <br><img class="tab2" width="380px" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fdbk1x5%2FbtsFcNzZxG9%2FAAAAAAAAAAAAAAAAAAAAAM-UJ38VzLBxRMTfecJGLSp8owBsH31UM1z5dSI188oo%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1772290799%26allow_ip%3D%26allow_referer%3D%26signature%3D1D%252FOxthahcHkZC3FcKsnnPCHBNk%253D">
+            <br><span class="tab"> 2) 터미널 실행</span>     
+            <br><img class="tab2" width="380px" src="https://www.lainyzine.com/ko/article/how-to-install-windows-terminal-powershell-wsl2/assets/A0E910AE-0479-4670-8610-7823CB01E2F0.png">
+            <br><span class="tab"> 3) 상단탭에서 우분투 선택</span>     
+            <br><img class="tab2" width="380px" src="https://www.lainyzine.com/ko/article/how-to-install-windows-terminal-powershell-wsl2/assets/059D8C93-75F2-464D-B18E-F5D614B630C0.png">
+            <br><span class="tab"> 4) 폴더 리스트 출력 및 버전확인</span>
+            <div class="code">ls</div>
+            <div class="code">cat /etc/os-release</div>
+            <img class="tab2" width="380px" src="https://lh6.googleusercontent.com/jU3csNMIpNEZNu7UWv7GvRm4h5OFeN57wWNCwm1q3SJTWG5WxhrtxAYz2csdMErvbxJ-q1fHVJJaaxff4827OgFN6qvyyXAhAjgHgLeVBKhIm08PnE3sBTPT2rE2BiW8qmqu21Jp">
+        </div>
+        <div class="tab">3. wsl 설치가 끝이났으면 다음 단계를 진행주세요.</div>
+    </div>
+</div>

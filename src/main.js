@@ -1,7 +1,7 @@
 import './style.css'
 import './board.css'
 
-const res = await fetch("001/001-01-01.html")
+const res = await fetch("001/001-01-02.html")
 const text = await res.text()
 console.log(text)
 document.querySelector('#app').innerHTML = text
