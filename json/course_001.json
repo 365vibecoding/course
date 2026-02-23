@@ -30,17 +30,17 @@
                 {
                     "id":"001-02-01",
                     "title":"vscode",
-                    "topic":""
+                    "topic":"001/001-02-01.html"
                 },
                 {
                     "id":"001-02-02",
                     "title":"node & python 설치",
-                    "topic":""
+                    "topic":"001/001-02-02.html"
                 },
                 {
                     "id":"001-02-03",
                     "title":"마무리",
-                    "topic":""
+                    "topic":"001/001-02-03.html"
                 }
             ]
         }
