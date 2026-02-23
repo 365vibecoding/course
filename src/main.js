@@ -1,7 +1,36 @@
-import './style.css'
-import './board.css'
+// import './style.css'
+// import './board.css'
 
-const res = await fetch("001/001-01-02.html")
+const htmlfile = "dev/001-01-01.html"//"001/001-01-02.html"
+
+const htmlfiles = [
+    ["1-1","001-01-01.html"],
+    ["1-2","001-01-02.html"],
+    ["2-1","001-02-01.html"],
+    ["2-2","001-02-02.html"],
+    ["2-3","001-02-03.html"],
+    ["test01","test01.html"]
+]
+
+const htmlfile_select = document.querySelector('#htmlfile')
+htmlfiles.forEach((data) => {
+    const opt = document.createElement('option')
+    opt.text = data[0]
+    opt.value = data[1]
+    htmlfile_select.append(opt)
+})
+
+const handlerHtmlfile = async (e) => {
+    console.log(e.target.value)
+    const file = e.target.value
+    const res = await fetch(`dev/${file}`)
+    const text = await res.text()
+    console.log(text)
+    document.querySelector('#app').innerHTML = text
+}
+htmlfile_select.addEventListener("change", handlerHtmlfile)
+
+const res = await fetch(htmlfile)
 const text = await res.text()
 console.log(text)
 document.querySelector('#app').innerHTML = text

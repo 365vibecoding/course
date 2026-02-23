@@ -1,0 +1,45 @@
+<div class="flex flex-col md:flex-row min-h-screen">
+  <main class="main-content flex-1 p-6 md:p-12 w-full">
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm rounded-lg border border-gray-200">
+      <header class="mb-10 pb-8 border-b-8 border-[#0a0a23]">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">2-1. VS Code 설치 및 WSL 연동</h1>
+        <p class="text-lg text-gray-700 italic">윈도우의 편리한 UI와 리눅스의 강력한 파일 시스템을 하나로 연결합니다.</p>
+      </header>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 flex items-center">
+          <span class="mr-2">📥</span> 1단계: VS Code 설치
+        </h2>
+        <p class="mb-4">공식 홈페이지에서 Windows용 설치 파일을 다운로드하여 설치합니다. 모든 기본 설정을 권장합니다.</p>
+        <a href="https://code.visualstudio.com/" class="inline-block bg-[#0a0a23] text-white px-6 py-2 font-bold hover:bg-gray-800 transition">Download VS Code</a>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 flex items-center">
+          <span class="mr-2">🔌</span> 2단계: WSL 확장 설치
+        </h2>
+        <p class="mb-4 text-gray-700">VS Code 실행 후 <strong>Extensions(Ctrl+Shift+X)</strong> 탭에서 다음을 설치하세요:</p>
+        <div class="bg-gray-50 p-4 border-l-4 border-[#24975d] mb-6">
+          <p class="font-bold text-[#24975d]">Extension Name: WSL (by Microsoft)</p>
+          <p class="text-sm text-gray-600 italic mt-1">이 확장은 VS Code가 리눅스 서브시스템을 원격 서버처럼 다루게 해줍니다.</p>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 flex items-center">
+          <span class="mr-2">⌨️</span> 3단계: 리눅스에서 VS Code 호출하기
+        </h2>
+        <p class="mb-2">Ubuntu 터미널을 열고 다음 명령어를 입력하여 연동을 확인합니다.</p>
+        <pre><code class="language-bash"># 테스트 폴더 생성 및 이동
+mkdir hello-wsl && cd hello-wsl
+# 현재 위치에서 VS Code 열기
+code .</code></pre>
+        <p class="mt-4 text-gray-700">처음 실행 시 <strong>'Installing VS Code Server'</strong> 메시지가 나타나며 연동이 진행됩니다.</p>
+      </section>
+
+      <footer class="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-gray-200">
+        <p>Everyday Happy Coding With 365vibecoding! 😊</p>
+      </footer>
+    </div>
+  </main>
+</div>

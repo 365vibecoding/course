@@ -1,0 +1,55 @@
+<div class="flex flex-col md:flex-row min-h-screen font-sans">
+  <main class="main-content flex-1 p-6 md:p-12 w-full">
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm rounded-lg border border-gray-200 text-[#1b1b32]">
+      <header class="mb-10 pb-8 border-b-8 border-[#0a0a23]">
+        <span class="text-sm font-bold text-[#0a0a23] uppercase tracking-widest mb-1 block">Step 2-1</span>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 uppercase">VS Code와 WSL 연동</h1>
+        <p class="text-lg text-gray-700">
+          윈도우에 설치된 VS Code가 리눅스 내부의 파일을 원격으로 편집하도록 설정합니다.
+        </p>
+      </header>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4">1️⃣ WSL 확장 프로그램 설치</h2>
+        <p class="mb-4 text-gray-700">VS Code 사이드바의 마켓플레이스 아이콘을 클릭하고 'WSL'을 검색하여 Microsoft가 만든 확장을 설치합니다.</p>
+        <div class="bg-[#eeeeee] border-2 border-[#d0d0d5] p-4 text-center rounded mb-4">
+            <img src="https://learn.microsoft.com/ko-kr/windows/wsl/media/vscode-remote-wsl-extensions.png" alt="VS Code WSL 확장 검색" class="w-full h-auto rounded shadow-sm">
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4">2️⃣ 리눅스에서 VS Code 호출하기</h2>
+        <p class="mb-4 text-gray-700">이제 <strong>Ubuntu 터미널</strong>을 열고, 리눅스 파일 시스템 안에 작업 폴더를 만든 뒤 VS Code를 실행합니다.</p>
+        <div class="bg-[#0a0a23] text-white p-6 rounded font-mono text-sm mb-4">
+            <p class="text-gray-400"># 홈 디렉토리로 이동</p>
+            <p>$ cd ~</p>
+            <p class="text-gray-400 mt-2"># 프로젝트 폴더 생성 및 이동</p>
+            <p>$ mkdir my-awesome-project && cd my-awesome-project</p>
+            <p class="text-gray-400 mt-2"># 현재 폴더에서 VS Code 열기 (점 '.' 필수!)</p>
+            <p>$ code .</p>
+        </div>
+      </section>
+
+       <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4">3️⃣ 연동 성공 확인 (핵심!)</h2>
+        <p class="mb-4 text-gray-700">잠시 후 윈도우에서 VS Code가 열립니다. <strong>창 왼쪽 하단 파란색 상태 표시줄</strong>에 아래와 같이 표시되어야 정상적으로 연결된 것입니다.</p>
+        
+        <div class="flex flex-col md:flex-row gap-6 items-center">
+            <div class="flex-1 bg-[#eeeeee] border-2 border-[#24975d] p-2 rounded text-center">
+                <p class="text-lg font-bold text-blue-600">WSL: Ubuntu - 22.04</p>
+                <p class="text-sm font-bold text-[#24975d]">↑ 이 표시가 보이면 성공!</p>
+            </div>
+            <div class="flex-1">
+                <p class="text-gray-700">
+                    이제 VS Code는 윈도우에 있지만, 모든 명령과 파일 저장은 리눅스(Ubuntu) 내부에서 이루어집니다.
+                </p>
+            </div>
+        </div>
+      </section>
+
+      <footer class="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-gray-200">
+        <p>Everyday Happy Coding With 365vibecoding! 😊</p>
+      </footer>
+    </div>
+  </main>
+</div>

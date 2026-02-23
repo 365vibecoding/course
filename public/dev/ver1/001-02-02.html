@@ -1,0 +1,33 @@
+<article class="max-w-3xl mx-auto py-12 px-6 text-[#1b1b32]">
+    <header class="mb-10 border-b-8 border-[#0a0a23] pb-4">
+        <p class="text-sm font-bold text-[#0a0a23] uppercase tracking-widest mb-1">Step 2-2</p>
+        <h1 class="text-4xl font-extrabold tracking-tight">Node.js 및 Python 설치</h1>
+    </header>
+
+    <div class="space-y-8 text-lg text-sm">
+        <h2 class="text-2xl font-bold">Node.js Version Manager (nvm)</h2>
+        <p>풀스택 개발은 프로젝트마다 서로 다른 Node.js 버전을 요구할 수 있습니다. NVM을 통해 손쉽게 관리하세요.</p>
+        
+        <div class="bg-[#0a0a23] text-white p-6 font-mono rounded-sm leading-relaxed overflow-x-auto">
+            <p class="text-[#24975d]"># NVM 설치 스크립트 실행</p>
+            <p>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash</p>
+            <p class="text-[#24975d] mt-4"># 현재 터미널에 nvm 적용</p>
+            <p>source ~/.bashrc</p>
+            <p class="text-[#24975d] mt-4"># 최신 안정화 버전(LTS) 설치</p>
+            <p>nvm install --lts</p>
+        </div>
+
+        <h2 class="text-2xl font-bold mt-12">Python 및 가상환경(venv)</h2>
+        <p>FastAPI는 독립된 환경에서 실행되는 것이 권장됩니다. 필요한 패키지들을 설치해 봅시다.</p>
+        
+        <div class="bg-[#eeeeee] p-6 border-2 border-[#d0d0d5] font-mono">
+            <p>sudo apt update</p>
+            <p>sudo apt install -y python3-pip python3-venv</p>
+        </div>
+
+        <div class="bg-[#d0d0d5] p-6 rounded-sm">
+            <p class="font-bold mb-2">💡 왜 PIP와 VENV인가요?</p>
+            <p class="text-sm italic">PIP는 파이썬 라이브러리를 설치하는 도구이며, VENV는 프로젝트별로 파이썬 환경을 분리하여 '패키지 충돌'을 방지하는 필수 도구입니다.</p>
+        </div>
+    </div>
+</article>

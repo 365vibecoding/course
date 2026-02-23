@@ -1,0 +1,72 @@
+<div class="flex flex-col md:flex-row min-h-screen font-sans">
+  <main class="main-content flex-1 p-6 md:p-12 w-full">
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm rounded-lg border border-gray-200 text-[#1b1b32]">
+      <header class="mb-10 pb-8 border-b-8 border-[#0a0a23]">
+        <span class="text-sm font-bold text-[#0a0a23] uppercase tracking-widest mb-1 block">Step 2-2</span>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 uppercase">Node.js 및 Python 설치</h1>
+        <p class="text-lg text-gray-700">
+          풀스택 개발을 위한 핵심 엔진들을 설치합니다. <strong>모든 명령어는 Ubuntu 터미널에서 실행하세요.</strong>
+        </p>
+      </header>
+
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-4 flex items-center">
+            <span class="text-[#24975d] mr-2">🟢</span> 1. Node.js (NVM 방식)
+        </h2>
+        <div class="bg-blue-50 p-4 border-l-4 border-blue-500 mb-4 text-sm">
+            <strong>왜 NVM을 쓰나요?</strong> `apt install nodejs`로 설치하면 구버전이 설치되거나 권한 문제(`sudo` 필요)가 발생하기 쉽습니다. NVM은 이를 해결해 주는 버전 관리 도구입니다.
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <p class="mb-2 font-bold">설치 명령어:</p>
+                <div class="bg-[#0a0a23] text-white p-4 rounded font-mono text-xs overflow-x-auto">
+                    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash<br>
+                    source ~/.bashrc<br>
+                    nvm install --lts
+                </div>
+            </div>
+             <div>
+                <p class="mb-2 font-bold">설치 확인 결과 (예시):</p>
+                <div class="bg-[#0a0a23] text-white p-4 rounded font-mono text-xs border-2 border-[#24975d]">
+                     <p>$ node -v</p>
+                    <p class="text-[#24975d]">v20.11.1</p>
+                    <p>$ npm -v</p>
+                    <p class="text-[#24975d]">10.2.4</p>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 flex items-center">
+            <span class="text-[#feac32] mr-2">🐍</span> 2. Python 및 필수 도구
+        </h2>
+         <p class="mb-4 text-gray-700">Ubuntu에는 파이썬이 내장되어 있지만, 패키지 관리자(`pip`)와 가상환경 도구(`venv`), 그리고 C언어 기반 라이브러리 컴파일을 위한 빌드 도구(`build-essential`)가 필요합니다.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <p class="mb-2 font-bold">설치 명령어:</p>
+                <div class="bg-[#0a0a23] text-white p-4 rounded font-mono text-xs overflow-x-auto">
+                    sudo apt update<br>
+                    sudo apt install -y python3-pip python3-venv build-essential
+                </div>
+            </div>
+             <div>
+                <p class="mb-2 font-bold">설치 확인 결과 (예시):</p>
+                <div class="bg-[#0a0a23] text-white p-4 rounded font-mono text-xs border-2 border-[#feac32]">
+                     <p>$ python3 --version</p>
+                    <p class="text-[#feac32]">Python 3.10.12</p>
+                    <p>$ pip3 --version</p>
+                    <p class="text-[#feac32]">pip 22.0.2 from ...</p>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <footer class="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-gray-200">
+        <p>Everyday Happy Coding With 365vibecoding! 😊</p>
+      </footer>
+    </div>
+  </main>
+</div>
