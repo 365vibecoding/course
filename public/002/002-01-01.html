@@ -1,0 +1,86 @@
+<div class="flex flex-col md:flex-row min-h-screen font-sans bg-gray-50 text-[#1b1b32]">
+  <main class="main-content flex-1 p-6 md:p-12 w-full">
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm rounded-lg border border-gray-200">
+      
+      <header class="mb-10 pb-8 border-b-8 border-[#0a0a23]">
+        <span class="text-sm font-bold text-[#0a0a23] uppercase tracking-widest mb-1 block">Step 1-1</span>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 uppercase italic">Vite 프로젝트 시작하기</h1>
+        <p class="text-lg text-gray-700">
+          명령어 한 줄로 현대적인 개발 환경을 구축하고, 브라우저에서 실시간으로 확인하는 방법을 배웁니다.
+        </p>
+      </header>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center">
+          <span class="mr-2">🛠️</span> 1단계: 프로젝트 생성
+        </h2>
+        <p class="mb-4 text-gray-700 leading-relaxed">
+          먼저 WSL(Ubuntu) 터미널을 열고, 프로젝트를 관리할 폴더로 이동합니다. 그 후 아래 명령어를 입력하여 Vite 프로젝트 뼈대를 생성합니다.
+        </p>
+        <div class="bg-[#0a0a23] text-white p-6 rounded font-mono text-sm mb-4">
+          <p class="text-gray-500"># todo-app이라는 이름의 Vanilla JS 프로젝트 생성</p>
+          <p>npm create vite@latest todo-app -- --template vanilla</p>
+        </div>
+        <p class="text-sm text-gray-500 italic">※ 화살표 키로 옵션을 선택할 필요 없이, 위 명령어로 한 번에 설정을 마칠 수 있습니다.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center">
+          <span class="mr-2">📦</span> 2단계: 의존성(Dependencies) 설치
+        </h2>
+        <p class="mb-4 text-gray-700">
+          프로젝트 폴더 안으로 이동하여, 개발에 필요한 도구들을 설치합니다.
+        </p>
+        <div class="bg-[#0a0a23] text-white p-6 rounded font-mono text-sm mb-6">
+          <p class="text-gray-500"># 폴더 이동</p>
+          <p>cd todo-app</p>
+          <p class="text-gray-500 mt-4"># 패키지 설치 (node_modules 폴더 생성)</p>
+          <p>npm install</p>
+        </div>
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 text-sm">
+          <strong>Tip:</strong> <code>npm install</code>을 실행해야만 프로젝트 작동에 필요한 라이브러리들이 내 컴퓨터에 다운로드됩니다.
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center">
+          <span class="mr-2">💻</span> 3단계: VS Code에서 코드 열기
+        </h2>
+        <p class="mb-4">터미널 명령어를 통해 현재 폴더를 VS Code 에디터로 즉시 엽니다.</p>
+        <div class="bg-[#0a0a23] text-white p-6 rounded font-mono text-sm mb-6">
+          <p class="text-gray-500"># 현재 위치(.)에서 VS Code 실행</p>
+          <p>code .</p>
+        </div>
+        <p class="text-gray-700">
+          윈도우 창으로 VS Code가 열리며, 왼쪽 파일 탐색기에서 프로젝트 구조(index.html, main.js 등)를 확인할 수 있습니다.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center">
+          <span class="mr-2">🚀</span> 4단계: 개발 서버 실행 및 브라우저 확인
+        </h2>
+        <p class="mb-4">이제 코드를 실행하여 브라우저에 띄울 차례입니다. VS Code의 터미널이나 Ubuntu 터미널에서 입력하세요.</p>
+        <div class="bg-[#0a0a23] text-white p-6 rounded font-mono text-sm mb-6">
+          <p class="text-gray-500"># 개발용 로컬 서버 실행</p>
+          <p>npm run dev</p>
+        </div>
+        
+        <div class="bg-yellow-50 border-2 border-yellow-200 p-6 rounded text-center">
+          <p class="font-bold text-yellow-800 mb-2 underline">Check your Browser!</p>
+          <p class="text-gray-700">
+            터미널에 표시된 주소(보통 <span class="font-bold">http://localhost:5173</span>)를 
+            브라우저 주소창에 입력하세요.
+          </p>
+          <div class="p-4 flex justify-center">
+            <img src="https://velog.velcdn.com/images/min06150315/post/1696f85c-11e5-4ebc-99c4-51f4abc25ddb/image.png" alt="vite + html 기본페이지" class="w-2/3 rounded">
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-gray-200">
+        <p class="mb-4">성공적으로 페이지를 띄웠나요? 띄웠다면 HTML 구조를 변경하러 다음 강의로 이동하세요.</p>
+      </footer>
+    </div>
+  </main>
+</div>

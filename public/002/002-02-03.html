@@ -1,0 +1,104 @@
+<div class="flex flex-col md:flex-row min-h-screen font-sans bg-gray-50 text-[#1b1b32]">
+  <main class="main-content flex-1 p-6 md:p-12 w-full">
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm rounded-lg border border-gray-200">
+      
+      <header class="mb-10 pb-8 border-b-8 border-[#0a0a23]">
+        <span class="text-sm font-bold text-[#0a0a23] uppercase tracking-widest mb-1 block">Step 2-3</span>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-tighter text-[#0a0a23]">데이터 영구 저장과 프로젝트 마무리</h1>
+        <p class="text-lg text-gray-700">
+          브라우저 저장소를 활용해 데이터를 보존하는 방법을 배우고, 우리의 첫 번째 웹 앱 프로젝트를 완성합니다.
+        </p>
+      </header>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center">
+          <span class="mr-2">🗄️</span> 1단계: LocalStorage 이해하기
+        </h2>
+        <p class="mb-4 text-gray-700 leading-relaxed">
+          지금까지 만든 앱은 새로고침을 하면 공들여 적은 할 일들이 모두 사라집니다. 자바스크립트 변수는 메모리에서만 동작하기 때문입니다. 데이터를 브라우저에 "포스트잇"처럼 붙여두는 기능이 바로 <strong>LocalStorage</strong>입니다.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 text-sm">
+            <div class="p-4 bg-gray-50 border border-gray-200 rounded">
+                <h3 class="font-bold mb-2">저장하기 (Save)</h3>
+                <code class="text-blue-700 font-bold text-xs">localStorage.setItem('key', 'value');</code>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-200 rounded">
+                <h3 class="font-bold mb-2">불러오기 (Load)</h3>
+                <code class="text-blue-700 font-bold text-xs">localStorage.getItem('key');</code>
+            </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center">
+          <span class="mr-2">📝</span> 2단계: 최종 코드 완성 (main.js)
+        </h2>
+        <p class="mb-4 text-gray-700">
+          기존 로직에 '저장'과 '불러오기' 기능을 추가한 최종 코드입니다. <code>JSON.stringify</code>와 <code>JSON.parse</code>를 사용하여 배열 데이터를 문자열로 변환해 저장합니다.
+        </p>
+        
+        <div class="bg-[#0a0a23] text-[#eeeeee] p-6 rounded font-mono text-xs leading-6 mb-6 overflow-x-auto shadow-xl">
+            <pre>
+/* 최종 main.js */
+const input = document.querySelector('#todo-input');
+const addBtn = document.querySelector('#add-btn');
+const todoList = document.querySelector('#todo-list');
+
+// 1. 초기 데이터 불러오기
+let todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+// 2. 화면에 그리는 함수
+const render = () => {
+  todoList.innerHTML = '';
+  todos.forEach((todo, index) => {
+    const li = document.createElement('li');
+    li.textContent = todo;
+    todoList.appendChild(li);
+  });
+  localStorage.setItem('todos', JSON.stringify(todos)); // 저장
+};
+
+// 3. 할 일 추가
+addBtn.addEventListener('click', () => {
+  if (input.value.trim()) {
+    todos.push(input.value);
+    input.value = '';
+    render();
+  }
+});
+
+// 시작 시 렌더링
+render();</pre>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center text-green-700">
+          <span class="mr-2">✅</span> 3단계: 프로젝트 완성 체크리스트
+        </h2>
+        <div class="space-y-3 text-gray-700">
+            <p class="flex items-center"><input type="checkbox" checked class="mr-2"> Vite로 개발 서버를 성공적으로 띄웠는가?</p>
+            <p class="flex items-center"><input type="checkbox" checked class="mr-2"> CSS로 화면 중앙 정렬과 폰트 크기를 조정했는가?</p>
+            <p class="flex items-center"><input type="checkbox" checked class="mr-2"> 버튼 클릭 시 리스트가 추가되고 입력창이 비워지는가?</p>
+            <p class="flex items-center"><input type="checkbox" checked class="mr-2"> 새로고침 후에도 목록이 유지되는가?</p>
+        </div>
+      </section>
+
+      <div class="bg-[#feac32]/10 border-2 border-[#feac32] p-6 rounded mb-12">
+          <h3 class="font-bold text-[#0a0a23] mb-2 uppercase italic">🚀 Self Challenge:</h3>
+          <p class="text-sm text-gray-700">
+            지금 만든 앱에는 '삭제' 기능이 없습니다. 리스트 항목 옆에 [삭제] 버튼을 만들고, <code>todos.splice(index, 1)</code> 함수를 사용하여 특정 항목을 지우는 기능을 직접 구현해 보세요!
+          </p>
+      </div>
+
+      <footer class="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-gray-200">
+        <p class="mb-8 font-bold text-2xl text-[#0a0a23] italic">"You just built your first Web App!"</p>
+        <p class="mb-8 font-bold text-xl text-[#0a0a23] italic">다음 강좌는 CSS에서 가장 중요한 Flex 입니다. 고고고</p>
+        <div class="flex flex-col items-center">
+           <p class="mt-4 text-gray-400 font-mono text-xs">Everyday Happy Coding With 365vibecoding! 😊</p>
+        </div>
+      </footer>
+    </div>
+  </main>
+</div>

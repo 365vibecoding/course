@@ -1,0 +1,104 @@
+<div class="flex flex-col md:flex-row min-h-screen font-sans bg-gray-50 text-[#1b1b32]">
+  <main class="main-content flex-1 p-6 md:p-12 w-full">
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm rounded-lg border border-gray-200">
+      
+      <header class="mb-10 pb-8 border-b-8 border-[#0a0a23]">
+        <span class="text-sm font-bold text-[#0a0a23] uppercase tracking-widest mb-1 block">Step 2-2</span>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-tighter text-[#0a0a23]">이벤트 처리 및 비즈니스 로직</h1>
+        <p class="text-lg text-gray-700">
+          자바스크립트로 HTML 요소를 선택하고, 사용자의 행동(클릭)에 반응하는 기능을 구현합니다.
+        </p>
+      </header>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center">
+          <span class="mr-2">🎯</span> 1단계: DOM 요소 선택 (Selectors)
+        </h2>
+        <p class="mb-4 text-gray-700 leading-relaxed">
+          자바스크립트가 HTML의 특정 요소를 제어하려면 먼저 해당 요소를 "찾아야" 합니다. 이때 CSS 선택자 규칙을 그대로 사용하는 <code>document.querySelector()</code>를 사용합니다.
+        </p>
+        
+        <div class="bg-[#0a0a23] text-gray-300 p-6 rounded font-mono text-sm mb-6 leading-relaxed">
+            <pre>
+// ID 선택자를 이용해 HTML 요소를 변수에 할당합니다.
+const input = document.querySelector('#todo-input');
+const addBtn = document.querySelector('#add-btn');
+const todoList = document.querySelector('#todo-list');</pre>
+        </div>
+        <p class="text-sm text-gray-600 bg-gray-100 p-3 border-l-4 border-gray-400">
+            <strong>참고:</strong> <code>#</code>은 ID를 의미하며, <code>.</code>은 클래스를 의미합니다. 특정 ID를 가진 요소는 페이지 내에서 유일해야 하므로 ID 선택자가 가장 자주 쓰입니다.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center">
+          <span class="mr-2">🔔</span> 2단계: 이벤트 처리 (Event Handling)
+        </h2>
+        <p class="mb-4 text-gray-700">
+          사용자가 버튼을 '클릭'하거나 키보드를 '입력'하는 사건을 <strong>이벤트(Event)</strong>라고 합니다. 자바스크립트는 이를 감시(Listen)하고 있다가 특정 함수를 실행합니다.
+        </p>
+        
+        <div class="bg-[#0a0a23] text-gray-300 p-6 rounded font-mono text-sm mb-6 leading-relaxed">
+            <pre>
+// 'click' 이벤트가 발생하면 중괄호 { } 안의 코드를 실행하라
+addBtn.addEventListener('click', () => {
+    console.log('버튼이 클릭되었습니다!');
+});</pre>
+        </div>
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 text-sm text-blue-800">
+            <strong>핵심:</strong> <code>addEventListener</code>는 "언제(사건), 무엇을(실행할 코드)" 할지를 결정하는 약속입니다.
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center">
+          <span class="mr-2">🚀</span> 3단계: 마무리 코드 통합 (main.js)
+        </h2>
+        <p class="mb-4 text-gray-700 leading-relaxed">
+          입력값을 가져와 새로운 리스트 항목(<code>li</code>)을 만들고 화면에 추가하는 완성된 로직입니다. <code>main.js</code>에 아래 코드를 작성하세요.
+        </p>
+        
+        <div class="bg-[#0a0a23] text-[#eeeeee] p-6 rounded font-mono text-xs leading-6 mb-6 overflow-x-auto shadow-xl">
+            <pre>
+/* main.js */
+const input = document.querySelector('#todo-input');
+const addBtn = document.querySelector('#add-btn');
+const todoList = document.querySelector('#todo-list');
+
+// 추가 버튼 클릭 시 실행
+addBtn.addEventListener('click', () => {
+  const value = input.value.trim(); // 앞뒤 공백 제거
+
+  if (value !== "") {
+    // 1. 새로운 li 요소 생성
+    const li = document.createElement('li');
+    li.textContent = value;
+    
+    // 2. 리스트에 추가
+    todoList.appendChild(li);
+    
+    // 3. 입력창 비우기 및 포커스
+    input.value = "";
+    input.focus();
+  } else {
+    alert("할 일을 입력해주세요!");
+  }
+});</pre>
+        </div>
+      </section>
+
+      <div class="p-4 bg-gray-100 border-dashed border-2 border-gray-300 rounded text-center mb-12">
+          <p class="text-sm text-gray-500 italic">[이미지 권장: 브라우저에서 텍스트 입력 후 버튼을 눌러 리스트가 추가된 실제 작동 화면]</p>
+      </div>
+
+      <footer class="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-gray-200">
+        <p class="mb-6 font-bold text-[#0a0a23]">축하합니다! 이제 데이터가 영구적으로 저장되지 않는 문제를 해결하러 가볼까요?</p>
+        <div class="flex justify-center">
+           <button class="bg-[#feac32] text-[#0a0a23] px-10 py-3 font-bold hover:bg-[#ffba5a] shadow-[5px_5px_0px_0px_rgba(10,10,35,1)] transition-all uppercase">
+              Next: 2-3. 데이터 영구 저장 (마무리) &rarr;
+           </button>
+        </div>
+      </footer>
+    </div>
+  </main>
+</div>

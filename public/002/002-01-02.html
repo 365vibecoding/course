@@ -1,0 +1,106 @@
+<div class="flex flex-col md:flex-row min-h-screen font-sans bg-gray-50 text-[#1b1b32]">
+  <main class="main-content flex-1 p-6 md:p-12 w-full">
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm rounded-lg border border-gray-200">
+      
+      <header class="mb-10 pb-8 border-b-8 border-[#0a0a23]">
+        <span class="text-sm font-bold text-[#0a0a23] uppercase tracking-widest mb-1 block">Step 1-2</span>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-tighter">프로젝트 초기화 및 HTML 뼈대 잡기</h1>
+        <p class="text-lg text-gray-700">
+          Vite의 기본 샘플 코드를 삭제하여 깨끗한 상태로 만들고, 순수 HTML로 앱의 구조를 설계합니다.
+        </p>
+      </header>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center">
+          <span class="mr-2">🧹</span> 1단계: 불필요한 파일 제거 (Clean Up)
+        </h2>
+        <p class="mb-4 text-gray-700">
+          Vite가 생성한 초기 파일 중 학습에 방해되는 샘플들을 삭제합니다. VS Code의 탐색기에서 다음 파일들을 처리하세요.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div class="p-4 border-2 border-red-200 bg-red-50 rounded">
+                <h3 class="font-bold text-red-700 mb-2">삭제할 파일</h3>
+                <ul class="list-disc list-inside text-sm space-y-1 text-red-600">
+                    <li><code>counter.js</code></li>
+                    <li><code>javascript.svg</code></li>
+                    <li><code>public/vite.svg</code></li>
+                </ul>
+            </div>
+            <div class="p-4 border-2 border-blue-200 bg-blue-50 rounded">
+                <h3 class="font-bold text-blue-700 mb-2">수정할 파일 (내용 전체 삭제)</h3>
+                <ul class="list-disc list-inside text-sm space-y-1 text-blue-600">
+                    <li><code>style.css</code> (비워두기)</li>
+                    <li><code>main.js</code> (비워두기)</li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-sm text-gray-500 italic text-center">[이미지 권장: 삭제 후 깔끔해진 VS Code 파일 탐색기 화면]</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center">
+          <span class="mr-2">🏗️</span> 2단계: 순수 HTML 뼈대 작성
+        </h2>
+        <p class="mb-4 text-gray-700 leading-relaxed">
+          <code>index.html</code> 파일을 열고, <code>&lt;body&gt;</code> 태그 내부를 모두 지운 뒤 아래와 같이 작성합니다. 
+          디자인(CSS) 요소 없이 <strong>의미론적(Semantic) 구조</strong>에만 집중합니다.
+        </p>
+        
+        <div class="bg-[#0a0a23] text-gray-300 p-6 rounded font-mono text-sm mb-6 leading-relaxed">
+            <pre>
+&lt;!-- index.html --&gt;
+&lt;div id="app"&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Todo App&lt;/h1&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;!-- 입력 영역 --&gt;
+    &lt;section id="input-section"&gt;
+      &lt;input type="text" id="todo-input" placeholder="할 일을 입력하세요..."&gt;
+      &lt;button id="add-btn"&gt;Add Todo&lt;/button&gt;
+    &lt;/section&gt;
+
+    &lt;!-- 리스트 출력 영역 --&gt;
+    &lt;section id="list-section"&gt;
+      &lt;ul id="todo-list"&gt;
+        &lt;!-- 자바스크립트로 항목이 추가될 위치 --&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/div&gt;</pre>
+        </div>
+
+        <div class="bg-gray-100 p-6 border-l-8 border-gray-400">
+            <h3 class="font-bold mb-2">구조 설명:</h3>
+            <ul class="list-disc list-inside text-sm space-y-2">
+                <li><strong>div#app:</strong> 전체 애플리케이션을 감싸는 컨테이너입니다.</li>
+                <li><strong>input#todo-input:</strong> 사용자가 글자를 입력하는 곳입니다.</li>
+                <li><strong>button#add-btn:</strong> 클릭 시 입력값을 저장할 트리거 역할을 합니다.</li>
+                <li><strong>ul#todo-list:</strong> 저장된 할 일들이 목록(li) 형태로 쌓일 공간입니다.</li>
+            </ul>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center">
+          <span class="mr-2">🔍</span> 3단계: 브라우저 결과 확인
+        </h2>
+        <p class="mb-4 text-gray-700">
+          터미널에 <code>npm run dev</code>가 실행 중인지 확인하고 브라우저를 보세요. 
+          디자인이 전혀 적용되지 않은 <strong>쌩얼(?)의 HTML</strong>이 보인다면 성공입니다!
+        </p>
+        <div class="border-4 border-dashed border-gray-300 p-10 text-center rounded">
+          <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*NUZ9dwSeUtNUNpeZ360fAw.png" alt="Todo App 기본 화면"/>
+            <p class="text-gray-400 italic text-sm">[아무 스타일 없이 텍스트와 버튼만 있는 브라우저 화면]</p>
+            <p class="text-xs text-gray-400 mt-2 italic">디자인이 없어서 허전해 보이지만, 이것이 견고한 앱의 뼈대입니다.</p>
+        </div>
+      </section>
+
+      <footer class="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-gray-200">
+        <p class="mb-4 font-bold text-[#0a0a23]">뼈대가 완성되었으니, 이제 생명(JavaScript)을 불어넣을 준비가 되셨나요?</p>
+      </footer>
+    </div>
+  </main>
+</div>
