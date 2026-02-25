@@ -8,32 +8,39 @@
     ],
     "modules":[
         {
+             "id":"002-01",
             "title":"개발 기초",
             "topics":[
                 {
+                    "id":"002-01-01",
                     "title":"Vite",
-                    "topic":"1-1.html"
+                    "topic":"002/002-01-01.html"
                 },
                 {
+                    "id":"002-01-02",
                     "title":"HTML",
-                    "topic":""
+                    "topic":"002/002-01-02.html"
                 }
             ]
         },
         {
+             "id":"002-02",
             "title":"Web App 만들기",
             "topics":[
                 {
+                    "id":"002-02-01",
                     "title":"Form 만들기",
-                    "topic":""
+                    "topic":"002/002-02-01.html"
                 },
                 {
+                    "id":"002-02-02",
                     "title":"Form Event 처리",
-                    "topic":""
+                    "topic":"002/002-02-02.html"
                 },
                 {
+                    "id":"002-02-03",
                     "title":"마무리",
-                    "topic":""
+                    "topic":"002/002-02-03.html"
                 }
             ]
         }
