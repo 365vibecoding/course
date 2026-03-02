@@ -7,27 +7,27 @@
     ],
     "modules":[
         {
-            "title":"준비 하기",
+            "title":"CSS Flex 마스터",
             "topics":[
                 {
                     "title":"과정 설명",
                     "topic":"1-1.md"
                 },
                 {
-                    "title":"윈도우 서브시스템",
+                    "title":"CSS와 Flex 기본 구조",
                     "topic":""
                 }
             ]
         },
         {
-            "title":"개발 환경 설정",
+            "title":"Flex 주요 속성",
             "topics":[
                 {
-                    "title":"vscode",
+                    "title":"Flex 방향 및 정렬",
                     "topic":""
                 },
                 {
-                    "title":"node & python 설치",
+                    "title":"Item 늘리기 및 채우기",
                     "topic":""
                 },
                 {
