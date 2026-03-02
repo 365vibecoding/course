@@ -1,0 +1,43 @@
+<div class="flex flex-col md:flex-row min-h-screen font-sans bg-gray-50 text-[#1b1b32]">
+  <main class="main-content flex-1 p-6 md:p-12 w-full">
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm rounded-lg border border-gray-200">
+      <header class="mb-10 pb-8 border-b-8 border-[#0a0a23]">
+        <span class="text-sm font-bold text-[#0a0a23] uppercase tracking-widest mb-1 block">Step 3-3-과제</span>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 uppercase italic">실습: Flex 정렬 시뮬레이터</h1>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          두 가지 다른 방향(Row, Column)을 가진 컨테이너를 만들고, 사용자의 선택에 따라 정렬이 실시간으로 변하는 도구를 제작합니다.
+        </p>
+      </header>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2">🎯 과제 요구사항</h2>
+        <div class="space-y-6">
+            <div class="flex items-start">
+                <span class="bg-[#0a0a23] text-white w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center mr-3 text-xs">1</span>
+                <p><strong>두 개의 컨테이너 생성:</strong> 하나는 가로 방향(row), 다른 하나는 세로 방향(column)으로 설정하세요.</p>
+            </div>
+            <div class="flex items-start">
+                <span class="bg-[#0a0a23] text-white w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center mr-3 text-xs">2</span>
+                <p><strong>아이템 배치:</strong> 각 컨테이너 내부에는 숫자가 적힌 5개의 아이템(박스)을 넣습니다.</p>
+            </div>
+            <div class="flex items-start">
+                <span class="bg-[#0a0a23] text-white w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center mr-3 text-xs">3</span>
+                <p><strong>컨트롤 패널 구축:</strong> 주축 정렬(justify-content)과 교차축 정렬(align-items)을 바꿀 수 있는 2개의 <code>&lt;select&gt;</code> 박스를 만드세요.</p>
+            </div>
+            <div class="flex items-start">
+                <span class="bg-[#0a0a23] text-white w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center mr-3 text-xs">4</span>
+                <p><strong>실시간 연동:</strong> 자바스크립트 <code>change</code> 이벤트를 사용하여, 선택된 값이 두 컨테이너의 스타일에 즉시 반영되게 하세요.</p>
+            </div>
+        </div>
+      </section>
+
+      <div class="bg-[#feac32]/10 border-4 border-dashed border-[#feac32] p-8 text-center rounded-xl">
+          <h3 class="font-bold text-[#0a0a23] mb-4 uppercase">이런 화면이 나와야 합니다!</h3>
+          <div class="p-4 bg-gray-100 rounded border border-gray-300 text-xs text-gray-400 italic">
+              [이미지 권장: 상단에 셀렉트 박스가 있고, 아래에 가로/세로 박스들이 정렬되어 움직이는 Gif]
+          </div>
+          <p class="mt-4 text-sm font-bold text-[#0a0a23]">"Row에서 가운데 정렬을 하면 가로 중앙으로 가지만, <br>Column에서 가운데 정렬을 하면 세로 중앙으로 가는지 확인하세요!"</p>
+      </div>
+    </div>
+  </main>
+</div>

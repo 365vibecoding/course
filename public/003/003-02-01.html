@@ -1,0 +1,150 @@
+<div class="flex flex-col md:flex-row min-h-screen font-sans bg-gray-50 text-[#1b1b32]">
+  <main class="main-content flex-1 p-6 md:p-12 w-full">
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm rounded-lg border border-gray-200">
+      
+      <header class="mb-10 pb-8 border-b-8 border-[#0a0a23]">
+        <span class="text-sm font-bold text-[#0a0a23] uppercase tracking-widest mb-1 block">Step 3-3</span>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 uppercase italic">방향(Direction)과 정렬(Alignment)</h1>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Flexbox 정렬의 핵심은 <strong>'어떤 축을 기준으로 움직이는가'</strong>를 이해하는 것입니다. 
+          방향이 바뀌면 정렬의 기준도 바뀝니다.
+        </p>
+      </header>
+
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center">
+          <span class="mr-2">🔄</span> 두 개의 축: Main Axis & Cross Axis
+        </h2>
+        <div class="bg-[#0a0a23] p-8 rounded-lg text-white mb-6 relative overflow-hidden">
+            <div class="relative z-10 space-y-8">
+                <div>
+                    <p class="text-[#feac32] font-mono text-sm uppercase mb-2">1. Main Axis (주축)</p>
+                    <p class="text-sm">아이템이 배치되는 기본 방향입니다. <code>justify-content</code>가 이 축을 담당합니다.</p>
+                </div>
+                <div>
+                    <p class="text-[#24975d] font-mono text-sm uppercase mb-2">2. Cross Axis (교차축)</p>
+                    <p class="text-sm">주축과 수직을 이루는 방향입니다. <code>align-items</code>가 이 축을 담당합니다.</p>
+                </div>
+            </div>
+            <div class="absolute top-1/2 left-0 w-full h-px bg-[#feac32]/30 -translate-y-1/2"></div>
+            <div class="absolute top-0 left-1/2 w-px h-full bg-[#24975d]/30 -translate-x-1/2"></div>
+        </div>
+      </section>
+
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2">1. flex-direction: 정렬의 기준 정하기</h2>
+        <p class="mb-8">주축을 가로로 할지, 세로로 할지 결정합니다. 이 설정에 따라 정렬 속성의 역할이 바뀝니다.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-indigo-600">flex-direction: row</h3>
+                    <span class="text-xs bg-indigo-100 text-indigo-600 px-2 py-1 rounded">기본값</span>
+                </div>
+                <div class="border-2 border-gray-200 p-4 rounded bg-gray-50 h-40 flex flex-row gap-2">
+                    <div class="w-10 h-10 bg-[#0a0a23] text-white flex items-center justify-center font-bold">1</div>
+                    <div class="w-10 h-10 bg-[#0a0a23] text-white flex items-center justify-center font-bold">2</div>
+                    <div class="w-10 h-10 bg-[#0a0a23] text-white flex items-center justify-center font-bold">3</div>
+                </div>
+                <ul class="text-xs space-y-1 text-gray-500 font-mono">
+                    <li>→ Main Axis: 가로 (Horizontal)</li>
+                    <li>↓ Cross Axis: 세로 (Vertical)</li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="font-bold text-indigo-600">flex-direction: column</h3>
+                <div class="border-2 border-gray-200 p-4 rounded bg-gray-50 h-40 flex flex-col gap-2 items-start">
+                    <div class="w-10 h-10 bg-[#feac32] text-[#0a0a23] flex items-center justify-center font-bold">1</div>
+                    <div class="w-10 h-10 bg-[#feac32] text-[#0a0a23] flex items-center justify-center font-bold">2</div>
+                    <div class="w-10 h-10 bg-[#feac32] text-[#0a0a23] flex items-center justify-center font-bold">3</div>
+                </div>
+                <ul class="text-xs space-y-1 text-gray-500 font-mono">
+                    <li>↓ Main Axis: 세로 (Vertical)</li>
+                    <li>→ Cross Axis: 가로 (Horizontal)</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-4 flex items-center text-[#feac32]">
+          <span class="mr-2">↔️</span> 2. justify-content
+        </h2>
+        <p class="mb-6 text-gray-700"><strong>주축(Main Axis)</strong>을 따라 아이템들을 정렬합니다.</p>
+        
+        <div class="space-y-6">
+            <div class="group">
+                <p class="text-sm font-mono mb-2 text-gray-400">justify-content: center;</p>
+                <div class="flex justify-center border-2 border-gray-100 p-4 bg-gray-50 gap-2">
+                    <div class="w-8 h-8 bg-[#0a0a23] rounded-sm"></div>
+                    <div class="w-8 h-8 bg-[#0a0a23] rounded-sm"></div>
+                </div>
+            </div>
+            <div class="group">
+                <p class="text-sm font-mono mb-2 text-gray-400">justify-content: space-between;</p>
+                <div class="flex justify-between border-2 border-gray-100 p-4 bg-gray-50">
+                    <div class="w-8 h-8 bg-[#0a0a23] rounded-sm"></div>
+                    <div class="w-8 h-8 bg-[#0a0a23] rounded-sm"></div>
+                    <div class="w-8 h-8 bg-[#0a0a23] rounded-sm"></div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-4 flex items-center text-[#24975d]">
+          <span class="mr-2">↕️</span> 3. align-items
+        </h2>
+        <p class="mb-6 text-gray-700"><strong>교차축(Cross Axis)</strong>을 따라 아이템들을 정렬합니다.</p>
+        
+        <div class="space-y-6">
+            <div class="group">
+                <p class="text-sm font-mono mb-2 text-gray-400">align-items: center;</p>
+                <div class="flex items-center border-2 border-gray-100 p-4 bg-gray-50 h-24 gap-2 justify-center">
+                    <div class="w-8 h-12 bg-[#24975d] rounded-sm"></div>
+                    <div class="w-8 h-6 bg-[#24975d] rounded-sm"></div>
+                    <div class="w-8 h-16 bg-[#24975d] rounded-sm"></div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="mb-12 bg-[#eeeeee] p-8 border-2 border-[#0a0a23]">
+        <h2 class="text-xl font-bold mb-6 text-center italic underline">The Ultimate Switch Rule</h2>
+        <div class="overflow-x-auto">
+            <table class="w-full text-sm text-center border-collapse">
+                <thead>
+                    <tr class="border-b-2 border-[#0a0a23]">
+                        <th class="py-2 px-4 italic font-bold">Direction</th>
+                        <th class="py-2 px-4 text-[#feac32]">justify-content</th>
+                        <th class="py-2 px-4 text-[#24975d]">align-items</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b border-gray-300">
+                        <td class="py-4 font-mono font-bold">row</td>
+                        <td class="py-4">가로 정렬</td>
+                        <td class="py-4">세로 정렬</td>
+                    </tr>
+                    <tr>
+                        <td class="py-4 font-mono font-bold text-red-600">column</td>
+                        <td class="py-4 text-red-600 font-bold">세로 정렬</td>
+                        <td class="py-4 text-red-600 font-bold">가로 정렬</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mt-6 text-xs text-center text-gray-500 font-bold tracking-tighter">
+            ※ 방향이 column으로 바뀌면, justify-content는 세로를 제어하고 align-items는 가로를 제어하게 됩니다!
+        </p>
+      </section>
+
+      <footer class="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-gray-200">
+        <p class="mb-6 font-bold text-[#0a0a23]">
+            [도전] 정렬의 기초가 잡혔습니다. 내용이 이해되었다면 다음강좌에서 제시하는 과제를 완성하시오.
+        </p>
+      </footer>
+    </div>
+  </main>
+</div>

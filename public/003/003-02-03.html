@@ -1,0 +1,71 @@
+<div class="flex flex-col md:flex-row min-h-screen font-sans bg-gray-50 text-[#1b1b32]">
+  <main class="main-content flex-1 p-6 md:p-12 w-full">
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm rounded-lg border border-gray-200">
+      <header class="mb-10 pb-8 border-b-8 border-[#24975d]">
+        <span class="text-sm font-bold text-[#24975d] uppercase tracking-widest mb-1 block">Step 3-3-샘플</span>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 uppercase">Flex Lab 모범 답안</h1>
+        <p class="text-lg text-gray-700">과제를 해결하기 위한 전체 코드 구조와 핵심 로직을 분석합니다.</p>
+      </header>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-[#d0d0d5] pb-2 text-[#24975d]">1. 구조 및 스타일</h2>
+        <div class="bg-[#0a0a23] text-[#eeeeee] p-6 rounded font-mono text-xs leading-5 overflow-x-auto mb-6">
+            <pre>
+&lt;!-- index.html 핵심 부분 --&gt;
+&lt;select id="select-justify"&gt;
+  &lt;option value="center"&gt;center&lt;/option&gt;
+  &lt;option value="space-between"&gt;space-between&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;div id="container-row" style="display: flex; height: 200px; border: 2px solid black;"&gt;
+  &lt;!-- 아이템 5개 --&gt;
+&lt;/div&gt;
+
+&lt;div id="container-col" style="display: flex; flex-direction: column; height: 400px; border: 2px solid black;"&gt;
+  &lt;!-- 아이템 5개 --&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-[#d0d0d5] pb-2 text-[#24975d]">2. 자바스크립트 로직</h2>
+        <div class="bg-[#0a0a23] text-[#eeeeee] p-6 rounded font-mono text-xs leading-6 overflow-x-auto">
+            <pre>
+const selectJ = document.querySelector('#select-justify');
+const selectA = document.querySelector('#select-align');
+const rowCont = document.querySelector('#container-row');
+const colCont = document.querySelector('#container-col');
+
+const applyFlex = () => {
+  // 사용자가 선택한 값을 가져옴
+  const jValue = selectJ.value;
+  const aValue = selectA.value;
+
+  // 두 컨테이너에 동시에 적용
+  [rowCont, colCont].forEach(el => {
+    el.style.justifyContent = jValue;
+    el.style.alignItems = aValue;
+  });
+};
+
+selectJ.addEventListener('change', applyFlex);
+selectA.addEventListener('change', applyFlex);</pre>
+        </div>
+      </section>
+
+      <div class="bg-gray-100 p-8 rounded-lg border-l-8 border-[#24975d]">
+          <h3 class="font-bold mb-4 text-[#0a0a23] uppercase tracking-tighter italic underline decoration-[#24975d] underline-offset-4">💡 왜 이렇게 작동하나요?</h3>
+          <p class="text-sm leading-relaxed text-gray-700">
+            가장 중요한 관전 포인트는 <code>justify-content: center</code>를 선택했을 때입니다.<br><br>
+            1. <strong>Row 컨테이너:</strong> 아이템들이 <strong>가로 중앙</strong>으로 모입니다.<br>
+            2. <strong>Column 컨테이너:</strong> 아이템들이 <strong>세로 중앙</strong>으로 모입니다.<br><br>
+            이는 <code>justify-content</code>가 항상 <strong>Main Axis(주축)</strong>를 따라 움직이기 때문입니다. 방향이 바뀌면 정렬의 '기준 축'이 바뀐다는 이 원리를 이해했다면 Flexbox 정복의 90%를 달성하신 것입니다!
+          </p>
+      </div>
+
+      <footer class="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-gray-200 font-mono">
+        Everyday Happy Coding With 365vibecoding! 😊
+      </footer>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,57 @@
+<div class="flex flex-col md:flex-row min-h-screen font-sans bg-gray-50 text-[#1b1b32]">
+  <main class="main-content flex-1 p-6 md:p-12 w-full">
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm rounded-lg border border-gray-200">
+      <header class="mb-10 pb-8 border-b-8 border-[#0a0a23]">
+        <span class="text-sm font-bold text-[#0a0a23] uppercase tracking-widest mb-1 block">Step 3-2</span>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 uppercase">Flex의 기본 구조: Container vs Item</h1>
+      </header>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-[#d0d0d5] pb-2 flex items-center">
+          <span class="mr-2">🏗️</span> 부모와 자식의 관계
+        </h2>
+        <p class="mb-6">Flexbox는 두 가지 요소의 상호작용으로 이루어집니다.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="p-5 border-2 border-[#0a0a23] bg-[#eeeeee]">
+                <h3 class="font-bold mb-2 uppercase">1. Flex Container (부모)</h3>
+                <p class="text-sm"><code>display: flex;</code>가 선언된 요소입니다. 정렬의 규칙을 정의합니다.</p>
+            </div>
+            <div class="p-5 border-2 border-[#24975d] bg-[#24975d]/5">
+                <h3 class="font-bold mb-2 uppercase">2. Flex Item (자식)</h3>
+                <p class="text-sm">부모 요소 안에 포함된 자식들입니다. 부모가 정한 규칙에 따라 배치됩니다.</p>
+            </div>
+        </div>
+
+        <div class="bg-[#0a0a23] text-gray-300 p-6 rounded font-mono text-sm leading-relaxed">
+          <p class="text-gray-500">/* style.css */</p>
+          <p>.container {</p>
+          <p class="ml-4 text-[#feac32] font-bold">display: flex;</p>
+          <p>}</p>
+        </div>
+      </section>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="space-y-4">
+            <h3 class="text-xl font-bold text-red-600 underline">Flex 적용 전 (Normal Flow)</h3>
+            <div class="bg-gray-100 p-4 rounded space-y-2 border">
+                <div class="bg-red-400 p-3 text-white font-bold text-center">Item 1</div>
+                <div class="bg-red-400 p-3 text-white font-bold text-center">Item 2</div>
+                <div class="bg-red-400 p-3 text-white font-bold text-center">Item 3</div>
+            </div>
+            <p class="text-xs text-gray-500 italic">"블록 요소이므로 한 줄에 하나씩 세로로 쌓입니다."</p>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-xl font-bold text-green-600 underline">Flex 적용 후 (Flex Flow)</h3>
+            <div class="bg-gray-100 p-4 rounded flex gap-2 border">
+                <div class="bg-green-500 p-3 text-white font-bold text-center flex-1">Item 1</div>
+                <div class="bg-green-500 p-3 text-white font-bold text-center flex-1">Item 2</div>
+                <div class="bg-green-500 p-3 text-white font-bold text-center flex-1">Item 3</div>
+            </div>
+            <p class="text-xs text-gray-500 italic">"부모에게 display: flex;를 주면 자식들이 가로로 나열됩니다."</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

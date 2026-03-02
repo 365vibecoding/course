@@ -11,11 +11,11 @@
             "topics":[
                 {
                     "title":"과정 설명",
-                    "topic":"1-1.md"
+                    "topic":"003/003-01-01.html"
                 },
                 {
-                    "title":"CSS와 Flex 기본 구조",
-                    "topic":""
+                    "title":"Flex 기본 구조",
+                    "topic":"003/003-01-02.html"
                 }
             ]
         },
@@ -24,15 +24,15 @@
             "topics":[
                 {
                     "title":"Flex 방향 및 정렬",
-                    "topic":""
+                    "topic":"003/003-02-01.html"
                 },
                 {
-                    "title":"Item 늘리기 및 채우기",
-                    "topic":""
+                    "title":"Flex 방향 및 정렬 과제",
+                    "topic":"003/003-02-02.html"
                 },
                 {
-                    "title":"마무리",
-                    "topic":""
+                    "title":"Flex 방향 및 정렬 과제(샘플)",
+                    "topic":"003/003-02-03.html"
                 }
             ]
         }
